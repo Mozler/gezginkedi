@@ -1,0 +1,19 @@
+{
+  "name": "gezginkedi",
+  "version": "0.0.1",
+  "description": "gezginkedi.com is a personal website built by KK & mozler",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js -js,hbs,css"
+  },
+  "author": "mozler",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
