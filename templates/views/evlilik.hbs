@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/evlilikstyle.css" />
+</head>
+
+<body>
+    <div id="main-container">
+        <div id="top-buttons">
+            <select name="Oda" id="room-select">
+                <option value="hepsi">Tümü</option>
+                <option value="mutfak">Mutfak</option>
+                <option value="banyo">Banyo</option>
+                <option value="yatak">Yatak Odası</option>
+                <option value="oturma">Oturma Odası</option>
+                <option value="diger">Çalışma Odası/Diğer</option>
+            </select>
+            <button class="add-new-button" id="new-item-show">Yeni Ekle</button>
+        </div>
+
+        <div id="table-container">
+            <table id="mutfak">
+                <th class="std-header">Oda</th>
+                <th class="wide-header">Eşya</th>
+                <th class="std-header">Alt Fiyat</th>
+                <th class="std-header">Üst Fiyat</th>
+                <th class="std-header">Alındı mı?</th>
+                <th class="std-header">&check;</th>
+            </table>
+            <table id="banyo">
+                <th class="std-header">Oda</th>
+                <th class="wide-header">Eşya</th>
+                <th class="std-header">Alt Fiyat</th>
+                <th class="std-header">Üst Fiyat</th>
+                <th class="std-header">Alındı mı?</th>
+                <th class="std-header">&check;</th>
+            </table>
+            <table id="yatak">
+                <th class="std-header">Oda</th>
+                <th class="wide-header">Eşya</th>
+                <th class="std-header">Alt Fiyat</th>
+                <th class="std-header">Üst Fiyat</th>
+                <th class="std-header">Alındı mı?</th>
+                <th class="std-header">&check;</th>
+            </table>
+            <table id="oturma">
+                <th class="std-header">Oda</th>
+                <th class="wide-header">Eşya</th>
+                <th class="std-header">Alt Fiyat</th>
+                <th class="std-header">Üst Fiyat</th>
+                <th class="std-header">Alındı mı?</th>
+                <th class="std-header">&check;</th>
+            </table>
+            <table id="diger">
+                <th class="std-header">Oda</th>
+                <th class="wide-header">Eşya</th>
+                <th class="std-header">Alt Fiyat</th>
+                <th class="std-header">Üst Fiyat</th>
+                <th class="std-header">Alındı mı?</th>
+                <th class="std-header">&check;</th>
+            </table>
+        </div>
+        <div id="new-item-container" style="visibility: hidden;">
+            <div id="new-item-content">
+                <span class="closeButton">
+                    <p id="closeModule">+</p>
+                </span>
+                <div class="field-cont">
+                    <select name="Oda" id="new-category-field" class="new-item-input" tabindex="1">
+                        <option value="mutfak">Mutfak</option>
+                        <option value="banyo">Banyo</option>
+                        <option value="yatak">Yatak Odası</option>
+                        <option value="oturma">Oturma Odası</option>
+                        <option value="diger">Çalışma Odası/Diğer</option>
+                    </select>
+                </div>
+                <div class="field-cont"><input type="text" id="new-item-field" class="new-item-input" placeholder="Eşya"
+                        tabindex="2"></div>
+                <div class="field-cont"><input type="number" id="new-lowPrice-field" class="new-item-input"
+                        placeholder="Alt Fiyat" tabindex="3"></div>
+                <div class="field-cont"><input type="number" id="new-highPrice-field" class="new-item-input"
+                        placeholder="Üst Fiyat" tabindex="4"></div>
+                <div id="itemLink"><input type="url" class="new-item-input" placeholder="Ürün linki" tabindex="5">
+                </div>
+                <div class="field-cont">
+                    <div class="new-item-input">
+                        <label for="bought">Alındı mı?</label><input type="checkbox" name="bought" id="new-bought-field"
+                            tabindex="6"></div>
+                </div>
+                <div class="field-cont"><button class="add-new-button" id="add-new-item" tabindex="7">Eşya Ekle</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/evlilik.js" type="module"></script>
+</body>
+
+</html>

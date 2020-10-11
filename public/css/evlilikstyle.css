@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#top-buttons {
+  height: 5vh;
+  width: 90vw;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  margin: 1vh auto 2vh;
+}
+
+#room-select {
+  flex: 3;
+  border: none;
+  background-color: rebeccapurple;
+  color: white;
+  text-align-last: center;
+  border-radius: 10px;
+  margin-right: 5px;
+  appearance: none;
+}
+
+.add-new-button {
+  flex: 1;
+  background-color: rebeccapurple;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#table-container {
+  width: 90vw;
+  display: block;
+  margin: 0 auto;
+}
+
+#new-item-container {
+  /* visibility: hidden; */
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  position: absolute;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+#new-item-content {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  justify-content: space-around;
+  align-content: space-around;
+  width: 500px;
+  max-width: 90%;
+  max-height: 50%;
+  position: relative;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 0 5px;
+}
+
+.field-cont {
+  width: 50%;
+  flex: 50%;
+  padding: 5px;
+  display: flex;
+}
+
+.new-item-input {
+  background-color: white;
+  box-sizing: border-box;
+  border-radius: 10px;
+  width: 50%;
+  flex: 50%;
+  border: 0.5px solid green;
+  border-radius: 10px;
+  padding: 5px;
+  min-height: 30px;
+  display: flex;
+}
+
+.closeButton {
+  flex: 100%;
+  text-align: center;
+  vertical-align: middle;
+  height: 20%;
+}
+
+.closeButton > p {
+  position: relative;
+  top: 0;
+  margin-left: auto;
+  right: 6px;
+  color: bisque;
+  font-size: 2rem;
+  width: 32px;
+  height: 32px;
+  transform: rotate(45deg);
+  background-color: blueviolet;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#add-new-item {
+  flex: 50%;
+  height: 20%;
+  min-height: 30px;
+}
+
+#itemLink {
+  width: 50%;
+  flex: 100%;
+  padding: 5px;
+  display: flex;
+}
+
+table {
+  width: 100%;
+  border: solid 1px black;
+  border-radius: 3px;
+  font-size: 0.8rem;
+}
+
+th {
+  text-align: center;
+  border: solid 1px black;
+}
+
+.std-header {
+  width: 10vw;
+}
+
+.wide-header {
+  width: 50vw;
+}
+
+td {
+  text-align: center;
+  border-bottom: 1px solid black;
+  /* border-right: 1px solid black; */
+  color: indigo;
+}
+
+.item {
+  text-align: left;
+}
+
+.link {
+  text-decoration: underline;
+}
