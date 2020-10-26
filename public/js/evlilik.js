@@ -20,6 +20,7 @@ async function main() {
                         document.getElementById("new-item-field").value = itemRes.item
                         document.getElementById("new-lowPrice-field").value = itemRes.lowPrice
                         document.getElementById("new-highPrice-field").value = itemRes.highPrice
+                        itemRes.bought ? document.getElementById("new-bought-field").checked = true : document.getElementById("new-bought-field").checked = false
 
                     })
                 } else { cell.className = prop }
