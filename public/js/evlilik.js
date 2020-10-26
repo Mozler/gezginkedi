@@ -82,10 +82,22 @@ async function main() {
     const addNewButton = document.getElementById("add-new-item")
     closeButton.addEventListener('click', (e) => {
         newCont.style.visibility = "hidden"
+        document.getElementById("new-category-field").value = ""
+        document.getElementById("new-item-field").value = ""
+        document.getElementById("new-lowPrice-field").value = ""
+        document.getElementById("new-highPrice-field").value = ""
+        document.getElementsByClassName("new-url-field")[0].value = ""
+        document.getElementById("new-bought-field").checked = false
     })
     newCont.addEventListener('click', (e) => {
         if (e.target.id === "new-item-container") {
             newCont.style.visibility = "hidden"
+            document.getElementById("new-category-field").value = ""
+            document.getElementById("new-item-field").value = ""
+            document.getElementById("new-lowPrice-field").value = ""
+            document.getElementById("new-highPrice-field").value = ""
+            document.getElementsByClassName("new-url-field")[0].value = ""
+            document.getElementById("new-bought-field").checked = false
         }
     })
     addNewButton.addEventListener('click', (e) => {
