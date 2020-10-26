@@ -24,7 +24,6 @@
 
         <div id="table-container">
             <table id="mutfak">
-                <th class="std-header">Oda</th>
                 <th class="wide-header">Eşya</th>
                 <th class="std-header">Alt Fiyat</th>
                 <th class="std-header">Üst Fiyat</th>
@@ -32,7 +31,6 @@
                 <th class="std-header">&check;</th>
             </table>
             <table id="banyo">
-                <th class="std-header">Oda</th>
                 <th class="wide-header">Eşya</th>
                 <th class="std-header">Alt Fiyat</th>
                 <th class="std-header">Üst Fiyat</th>
@@ -40,7 +38,6 @@
                 <th class="std-header">&check;</th>
             </table>
             <table id="yatak">
-                <th class="std-header">Oda</th>
                 <th class="wide-header">Eşya</th>
                 <th class="std-header">Alt Fiyat</th>
                 <th class="std-header">Üst Fiyat</th>
@@ -48,7 +45,6 @@
                 <th class="std-header">&check;</th>
             </table>
             <table id="oturma">
-                <th class="std-header">Oda</th>
                 <th class="wide-header">Eşya</th>
                 <th class="std-header">Alt Fiyat</th>
                 <th class="std-header">Üst Fiyat</th>
@@ -56,7 +52,6 @@
                 <th class="std-header">&check;</th>
             </table>
             <table id="diger">
-                <th class="std-header">Oda</th>
                 <th class="wide-header">Eşya</th>
                 <th class="std-header">Alt Fiyat</th>
                 <th class="std-header">Üst Fiyat</th>
@@ -64,11 +59,16 @@
                 <th class="std-header">&check;</th>
             </table>
         </div>
+
         <div id="new-item-container" style="visibility: hidden;">
             <div id="new-item-content">
-                <span class="closeButton">
-                    <p id="closeModule">+</p>
-                </span>
+                <div class="button-container">
+                    <svg id="close-button" class="small-button" viewBox="0 0 100 100"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="m0 0 100 100" />
+                        <path d="m0 100 100-100" />
+                    </svg>
+                </div>
                 <div class="field-cont">
                     <select name="Oda" id="new-category-field" class="new-item-input" tabindex="1">
                         <option value="mutfak">Mutfak</option>
@@ -78,24 +78,39 @@
                         <option value="diger">Çalışma Odası/Diğer</option>
                     </select>
                 </div>
-                <div class="field-cont"><input type="text" id="new-item-field" class="new-item-input" placeholder="Eşya"
-                        tabindex="2"></div>
+                <div class="field-cont">
+                    <input type="text" id="new-item-field" class="new-item-input" placeholder="Eşya" tabindex="2">
+                </div>
                 <div class="field-cont"><input type="number" id="new-lowPrice-field" class="new-item-input"
-                        placeholder="Alt Fiyat" tabindex="3"></div>
+                        placeholder="Alt Fiyat" tabindex="3">
+                </div>
                 <div class="field-cont"><input type="number" id="new-highPrice-field" class="new-item-input"
-                        placeholder="Üst Fiyat" tabindex="4"></div>
-                <div id="itemLink"><input type="url" class="new-item-input" placeholder="Ürün linki" tabindex="5">
+                        placeholder="Üst Fiyat" tabindex="4">
+                </div>
+                <div id="itemLink" class="new-url-input"><input type="url" class="new-url-field"
+                        placeholder="Ürün linki" tabindex="5">
+                    <svg id="add-link-button" class="small-button" viewBox="0 0 100 100"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="m0 50 100 0" />
+                        <path d="m50 0 0 100" />
+                    </svg>
                 </div>
                 <div class="field-cont">
                     <div class="new-item-input">
-                        <label for="bought">Alındı mı?</label><input type="checkbox" name="bought" id="new-bought-field"
-                            tabindex="6"></div>
+                        <label for="bought">Alındı mı?</label>
+                        <input type="checkbox" name="bought" id="new-bought-field" tabindex="6">
+                    </div>
                 </div>
                 <div class="field-cont"><button class="add-new-button" id="add-new-item" tabindex="7">Eşya Ekle</button>
                 </div>
             </div>
         </div>
+
+        <div id="alert-popup">
+            <span id="alert-text"></span>
+        </div>
     </div>
+    <footer></footer>
     <script src="/js/evlilik.js" type="module"></script>
 </body>
 

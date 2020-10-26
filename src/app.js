@@ -21,6 +21,16 @@ app.get("/evlilik", (req, res) => {
   res.render("evlilik");
 });
 
+app.get('/evlilik/:_id', async (req, res) => {
+  try {
+    const esya = await Esya.findOne({ _id: req.params._id })
+    if (!esya) { return res.status(404).send() }
+    res.send(esya)
+  } catch (e) {
+    res.status(500).send()
+  }
+})
+
 app.get("/evlilik-list", async (req, res) => {
   try {
     const esyalar = await Esya.find({})
