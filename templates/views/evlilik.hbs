@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    {{>header}}
     <div id="main-container">
         <div id="top-buttons">
             <select name="Oda" id="room-select">
@@ -87,8 +88,8 @@
                 <div class="field-cont"><input type="number" id="new-highPrice-field" class="new-item-input"
                         placeholder="Üst Fiyat" tabindex="4">
                 </div>
-                <div id="itemLink" class="new-url-input"><input type="url" class="new-url-field"
-                        placeholder="Ürün linki" tabindex="5">
+                <div class="new-url-input"><input type="url" class="new-url-field" placeholder="Ürün linki"
+                        tabindex="5">
                     <svg id="add-link-button" class="small-button" viewBox="0 0 100 100"
                         xmlns="http://www.w3.org/2000/svg">
                         <path d="m0 50 100 0" />
@@ -110,7 +111,7 @@
             <span id="alert-text"></span>
         </div>
     </div>
-    <footer></footer>
+    {{>footer}}
     <script src="/js/evlilik.js" type="module"></script>
 </body>
 

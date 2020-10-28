@@ -74,31 +74,27 @@ async function main() {
 
     const addNew = document.getElementById("new-item-show")
     addNew.addEventListener('click', (e) => {
-        const newCont = document.getElementById("new-item-container")
-        newCont.style.visibility = "visible"
+        document.getElementById("new-item-container").style.visibility = "visible"
+        document.body.classList.toggle("modal-open");
+        document.getElementsByTagName("header")[0].firstElementChild.classList.toggle("hue");
     })
 
     const closeButton = document.getElementById("close-button")
     const newCont = document.getElementById("new-item-container")
     const addNewButton = document.getElementById("add-new-item")
+    const addLinkButton = document.getElementById("add-link-button")
     closeButton.addEventListener('click', (e) => {
         newCont.style.visibility = "hidden"
-        document.getElementById("new-category-field").value = ""
-        document.getElementById("new-item-field").value = ""
-        document.getElementById("new-lowPrice-field").value = ""
-        document.getElementById("new-highPrice-field").value = ""
-        document.getElementsByClassName("new-url-field")[0].value = ""
-        document.getElementById("new-bought-field").checked = false
+        document.body.classList.toggle("modal-open");
+        document.getElementsByTagName("header")[0].firstElementChild.classList.toggle("hue");
+        resetNewContainer()
     })
     newCont.addEventListener('click', (e) => {
         if (e.target.id === "new-item-container") {
             newCont.style.visibility = "hidden"
-            document.getElementById("new-category-field").value = ""
-            document.getElementById("new-item-field").value = ""
-            document.getElementById("new-lowPrice-field").value = ""
-            document.getElementById("new-highPrice-field").value = ""
-            document.getElementsByClassName("new-url-field")[0].value = ""
-            document.getElementById("new-bought-field").checked = false
+            document.body.classList.toggle("modal-open");
+            document.getElementsByTagName("header")[0].firstElementChild.classList.toggle("hue");
+            resetNewContainer()
         }
     })
     addNewButton.addEventListener('click', (e) => {
@@ -112,4 +108,28 @@ async function main() {
             alertWindow.style.visibility = "hidden"
         }, 3000);
     })
+
+    addLinkButton.addEventListener('click', (e) => {
+
+        const parent = addLinkButton.parentNode;
+        const newCont = document.getElementById("new-item-content").insertBefore(parent.cloneNode(true), parent);
+        newCont.firstChild.disabled = true;
+        parent.firstChild.value = "";
+        newCont.removeChild(newCont.children[1]);
+    })
+}
+
+function resetNewContainer() {
+    const urls = document.querySelectorAll(".new-url-input");
+    if (urls.length > 1) {
+        for (let i = 0; i < urls.length - 1; i++) {
+            urls[i].remove();
+        }
+    }
+    document.getElementById("new-category-field").value = ""
+    document.getElementById("new-item-field").value = ""
+    document.getElementById("new-lowPrice-field").value = ""
+    document.getElementById("new-highPrice-field").value = ""
+    document.getElementsByClassName("new-url-field")[0].value = ""
+    document.getElementById("new-bought-field").checked = false
 }

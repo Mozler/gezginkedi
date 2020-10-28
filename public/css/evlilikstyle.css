@@ -6,6 +6,10 @@
     "Lucida Sans", Arial, sans-serif;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 footer {
   height: 10vh;
   width: 100vw;
@@ -51,10 +55,11 @@ footer {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
-  position: absolute;
+  position: fixed;
   top: 0;
   justify-content: center;
   align-items: center;
+  backdrop-filter: blur(3px);
 }
 
 #new-item-content {
@@ -65,7 +70,7 @@ footer {
   align-content: space-around;
   width: 500px;
   max-width: 90%;
-  max-height: 50%;
+  max-height: 70%;
   position: relative;
   background-color: #f4faff;
   border-radius: 10px;
@@ -162,7 +167,7 @@ footer {
   top: 10px;
   border-radius: 10px;
   left: calc((100vw - 30vw) / 2);
-  transition: opacity 2s ease-in-out;
+  transition: all 2s ease-in-out;
 }
 
 table {
@@ -188,7 +193,7 @@ th {
 
 td {
   text-align: center;
-  border-bottom: 1px solid #052f5f;
+  border-bottom: 1px solid #d6dbe0;
   color: #052f5f;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -202,4 +207,48 @@ td {
 
 .link {
   text-decoration: underline;
+}
+
+footer {
+  color: #888888;
+  border-top: 1px solid #eeeeee;
+  margin-top: 16px;
+  padding: 16px 0;
+  text-align: center;
+}
+
+header {
+  display: flex;
+  flex: 1;
+  width: 100vw;
+  height: 10vh;
+  line-height: 10vh;
+  margin-top: 1vh;
+  margin-bottom: 2vh;
+  justify-content: center;
+}
+
+#title {
+  font-family: optima;
+  font-weight: bold;
+  font-size: 34px;
+}
+
+#header-logo {
+  fill: #052f5f;
+  width: 64px;
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+}
+#header-logo.hue {
+  animation: hue 5s linear infinite;
+}
+
+@keyframes hue {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
 }
